@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "account_id": 1,
+      "username": "admin",
+      "user_level": "Admin",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "account_id": 2,
+      "username": "janedoe",
+      "user_level": "Admin",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "account_id": 3,
+      "username": "bobsmith",
+      "user_level": "Admin",
+      "password": "123"
+    },
+    {
+      "id": "4",
+      "account_id": 4,
+      "username": "alicej",
+      "user_level": "Admin",
+      "password": "123"
+    },
+    {
+      "username": "mike",
+      "password": "123",
+      "user_level": "Admin",
+      "account_id": 5,
+      "id": "5"
+    },
+    {
+      "username": "liamkurt12",
+      "password": "123",
+      "user_level": "Admin",
+      "account_id": 6,
+      "id": "6"
+    },
+    {
+      "username": "admin12",
+      "password": "123",
+      "user_level": "Admin",
+      "account_id": 7,
+      "id": "7"
+    },
+    {
+      "username": "test",
+      "password": "123",
+      "user_level": "Admin",
+      "account_id": 8,
+      "id": "8"
+    },
+    {
+      "username": "test3",
+      "password": "123",
+      "user_level": "Admin",
+      "account_id": 9,
+      "id": "9"
+    }
+  ]
+}
