@@ -8,23 +8,23 @@ Table of Contents
 
 
 
-Project Overview
+- Project Overview
 
 
 
-Features
+- Features
 
 
 
-Technologies Used
+- Technologies Used
 
 
 
-Project Structure
+- Project Structure
 
 
 
-Installation
+- Installation
 
 
 
@@ -160,7 +160,11 @@ MariaDB server installed and running
 
 Git
 
-Requirements.txt - For installation of Dependencies
+
+
+requirements.txt - For installation of Dependencies in python
+
+
 
 users.sql - Database for demo
 
@@ -175,4 +179,3 @@ Admin Panel: Access the backend admin interface (usually at http://localhost:800
 
 
 User Dashboard: Open http://localhost:5173/user-dashboard in your browser to access the user interface with school info, announcements, campus map, and feedback submission via QR code.
-
