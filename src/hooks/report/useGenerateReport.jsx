@@ -94,7 +94,6 @@ const useGenerateReport = () => {
     });
   };
 
-  // Memoize functions to prevent unnecessary recalculations
   return useMemo(
     () => ({
       filterFeedbackByMonth,

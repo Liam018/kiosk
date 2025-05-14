@@ -78,7 +78,7 @@ const useEditAnnouncement = ({ isOpen, onClose, onRefresh, announce }) => {
       };
 
       await axios.patch(
-        `http://192.168.0.213:8000/users/announcement/${announce.announcement_id}/`,
+        `http://127.0.0.1:8000/users/announcement/${announce.announcement_id}/`,
         updatedData
       );
 

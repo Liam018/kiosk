@@ -10,7 +10,7 @@ const useArchivedAnnouncements = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get("http://192.168.0.213:8000/users/announcement/archived/", {
+      const response = await axios.get("http://127.0.0.1:8000/users/announcement/archived/", {
         withCredentials: true,
       });
       const formattedAnnouncements = response.data.map((announcement) => ({

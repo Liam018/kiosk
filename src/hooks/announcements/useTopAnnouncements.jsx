@@ -1,4 +1,3 @@
-// src/hooks/announcements/useTopAnnouncements.jsx
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -10,7 +9,7 @@ const useTopAnnouncements = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        "http://192.168.0.213:8000/users/announcement/top/",
+        "http://127.0.0.1:8000/users/announcement/top/",
         { withCredentials: true }
       );
       setTopAnnouncements(response.data);

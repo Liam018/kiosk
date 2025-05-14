@@ -14,7 +14,6 @@ const Map = () => {
     roomName,
     filteredRooms,
     searchTerm,
-    detailRef,
     showModal,
     loading,
     error,

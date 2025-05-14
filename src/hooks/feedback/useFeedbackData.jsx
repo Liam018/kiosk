@@ -9,8 +9,8 @@ const useFeedbackData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const feedbackRes = await axios.get("http://192.168.0.213:8000/users/feedback/list/");
-        const questionRes = await axios.get("http://192.168.0.213:8000/users/question/list/");
+        const feedbackRes = await axios.get("http://127.0.0.1:8000/users/feedback/list/");
+        const questionRes = await axios.get("http://127.0.0.1:8000/users/question/list/");
         const qMap = questionRes.data.reduce((map, q) => {
           map[q.id] = q.text;
           return map;
@@ -30,7 +30,7 @@ const useFeedbackData = () => {
 
   const createQuestion = async (questionData) => {
     try {
-      const response = await axios.post("http://192.168.0.213:8000/users/question/create/", questionData);
+      const response = await axios.post("http://127.0.0.1:8000/users/question/create/", questionData);
       setQuestionMap((prev) => ({
         ...prev,
         [response.data.id]: response.data.text,

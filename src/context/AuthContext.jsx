@@ -17,7 +17,7 @@ export default function AuthProvider({ children }) {
   const login = async (credentials) => {
     try {
       const response = await axios.post(
-        "http://192.168.0.213:8000/users/login/",
+        "http://127.0.0.1:8000/users/login/",
         credentials,
         { withCredentials: true }
       );
@@ -43,7 +43,7 @@ export default function AuthProvider({ children }) {
   const logout = async () => {
     try {
       await axios.post(
-        "http://192.168.0.213:8000/users/logout/",
+        "http://127.0.0.1:8000/users/logout/",
         {},
         { withCredentials: true }
       );
@@ -91,7 +91,7 @@ export default function AuthProvider({ children }) {
   const refreshAccessToken = async () => {
     try {
       const response = await axios.post(
-        "http://192.168.0.213:8000/users/refresh/",
+        "http://127.0.0.1:8000/users/refresh/",
         {},
         { withCredentials: true }
       );
@@ -126,7 +126,7 @@ export default function AuthProvider({ children }) {
           error.response &&
           error.response.status === 401 &&
           !originalRequest._retry &&
-          originalRequest.url !== "http://192.168.0.213:8000/users/refresh/"
+          originalRequest.url !== "http://127.0.0.1:8000/users/refresh/"
         ) {
           originalRequest._retry = true;
           const newAccessToken = await refreshAccessToken();
@@ -152,7 +152,7 @@ export default function AuthProvider({ children }) {
     const verifySession = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.0.213:8000/users/protected/",
+          "http://127.0.0.1:8000/users/protected/",
           {
             withCredentials: true,
             headers: {
@@ -170,7 +170,7 @@ export default function AuthProvider({ children }) {
           if (newAccessToken) {
             try {
               const response = await axios.get(
-                "http://192.168.0.213:8000/users/protected/",
+                "http://127.0.0.1:8000/users/protected/",
                 {
                   withCredentials: true,
                   headers: {

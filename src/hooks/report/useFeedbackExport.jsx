@@ -267,11 +267,11 @@ const useFeedbackExport = (selectedMonth, selectedYear, feedbackData) => {
             yPosition += 7;
           });
 
-          yPosition += 5; // Extra space between roles
+          yPosition += 5; 
         });
       }
 
-      yPosition += 15; // Space before next question
+      yPosition += 15; 
     });
 
     // Save the PDF

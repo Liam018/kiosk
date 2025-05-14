@@ -19,7 +19,7 @@ function FeedbackForm() {
     const fetchQuestions = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.0.213:8000/users/question/list/"
+          "http://127.0.0.1:8000/users/question/list/"
         );
         setQuestions(response.data);
         setRatingsData(
@@ -77,7 +77,7 @@ function FeedbackForm() {
 
       console.log("Submitting payload:", JSON.stringify(finalData, null, 2));
       await axios.post(
-        "http://192.168.0.213:8000/users/feedback/create/",
+        "http://127.0.0.1:8000/users/feedback/create/",
         finalData
       );
       setStep(3); 

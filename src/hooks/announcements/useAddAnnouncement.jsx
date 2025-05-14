@@ -63,7 +63,7 @@ const useAddAnnouncement = ({ isOpen, onClose, onAnnouncementCreated }) => {
       const startDateTime = new Date(startDate.setHours(0, 0, 0, 0)).toISOString(); 
       const endDateTime = new Date(endDate.setHours(23, 59, 59, 999)).toISOString(); 
       const response = await axios.post(
-        "http://192.168.0.213:8000/users/announcement/",
+        "http://127.0.0.1:8000/users/announcement/",
         
         {
           announcement_title: formData.announcement_title,

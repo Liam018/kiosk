@@ -24,7 +24,7 @@ const useArchiveModal = ({ isOpen, onClose, onRestore }) => {
   const fetchArchivedAnnouncements = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://192.168.0.213:8000/users/announcement/archived/", {
+      const response = await axios.get("http://127.0.0.1:8000/users/announcement/archived/", {
         withCredentials: true,
       });
       setArchivedAnnouncements(response.data);
@@ -110,7 +110,7 @@ const useArchiveModal = ({ isOpen, onClose, onRestore }) => {
       const startDateTime = tempStartDate.toISOString();
       const endDateTime = tempEndDate.toISOString();
       await axios.patch(
-        `http://192.168.0.213:8000/users/announcement/${selectedAnnouncement.announcement_id}/`, 
+        `http://127.0.0.1:8000/users/announcement/${selectedAnnouncement.announcement_id}/`, 
         {
           is_archived: false,
           views: 0,

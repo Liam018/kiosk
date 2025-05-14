@@ -55,7 +55,7 @@ const useAnnouncementTable = ({ selectedDate, announcements, onRefresh }) => {
   const handleArchiveClick = async (id) => {  
     try {
       setLoading(true);
-      await axios.patch(`http://192.168.0.213:8000/users/announcement/${id}/`, {
+      await axios.patch(`http://127.0.0.1:8000/users/announcement/${id}/`, {
         is_archived: true,
       },
       {

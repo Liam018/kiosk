@@ -10,7 +10,6 @@ const useMap = () => {
   const [roomData, setRoomData] = useState([]);
   const [filteredRooms, setFilteredRooms] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const detailRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -59,7 +58,7 @@ const useMap = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://192.168.0.213:8000/users/room/list/`
+          `http://127.0.0.1:8000/users/room/list/`
         );
         setRoomData(response.data);
         setFilteredRooms(response.data);
@@ -86,13 +85,6 @@ const useMap = () => {
       setFilteredRooms(filtered);
     }
   }, [searchTerm, roomData]);
-
-  // Scroll to detail view when a room is selected
-  useEffect(() => {
-    if (selectedRoom && detailRef.current) {
-      detailRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }, [selectedRoom]);
 
   // Handler functions
   const handleRoomClick = (room, e) => {
@@ -144,7 +136,7 @@ const useMap = () => {
   const handleSave = async (updatedRoom) => {
     try {
       const response = await axios.patch(
-        `http://192.168.0.213:8000/users/room/update/${updatedRoom.room_id}/`,
+        `http://127.0.0.1:8000/users/room/update/${updatedRoom.room_id}/`,
         {
           room_number: updatedRoom.room_number,
           room_name: updatedRoom.room_name || "N/A",
@@ -207,7 +199,6 @@ const useMap = () => {
     roomName,
     filteredRooms,
     searchTerm,
-    detailRef,
     showModal,
     loading,
     error,

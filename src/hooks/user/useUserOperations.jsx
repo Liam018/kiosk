@@ -9,7 +9,7 @@ const useUserOperations = (user) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://192.168.0.213:8000/users/users/", {
+        const response = await axios.get("http://127.0.0.1:8000/users/users/", {
           withCredentials: true,
         });
         setUsers(response.data);
@@ -24,7 +24,7 @@ const useUserOperations = (user) => {
   const handleAddUser = async (newUserData) => {
     try {
       const response = await axios.post(
-        "http://192.168.0.213:8000/users/users/create/",
+        "http://127.0.0.1:8000/users/users/create/",
         newUserData
       );
       setUsers([...users, response.data]);
@@ -58,7 +58,7 @@ const useUserOperations = (user) => {
       }
 
       const response = await axios.patch(
-        `http://192.168.0.213:8000/users/users/${selectedUser.account_id}/`,
+        `http://127.0.0.1:8000/users/users/${selectedUser.account_id}/`,
         payload
       );
 
